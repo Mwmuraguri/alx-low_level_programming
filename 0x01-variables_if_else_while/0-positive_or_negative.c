@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - Determines if a number is positive,negative or zero
+ * main - Determines if a number is positive,negative or zeriiiio
  *
  * Return: always 0 (Success)
  */
@@ -25,7 +25,7 @@ int main(void)
 	}
 	else
 	{
-		print("%d is negative\n", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
