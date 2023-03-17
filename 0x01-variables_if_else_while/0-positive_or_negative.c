@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * main - Determines if a number is positive,negative or zero
  *
  * Return: always 0 (Success)
  */
