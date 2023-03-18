@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
  * main - Prints all possible combinations of single-digit numbers
@@ -17,7 +15,7 @@ int main(void)
 		if (n != 57)
 		{
 			putchar(',');
-			putchar(';');
+			putchar('');
 		}
 	}
 	putchar('\n');
