@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * _calloc - allocates memory for an array
  * using malloc
@@ -11,22 +11,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	if (nmemb == 0)
-		return (NULL);
-	if (size == 0)
-		return (NULL);
+	void *ptr = malloc(nmemb * size);
 
-	void *pointer = malloc(nmemb * size);
-
-	if (pointer == NULL)
-		return (NULL);
+	if (ptr != NULL)
 	{
-		char *ptr = pointer;
-
-		for (unsigned int x = 0; x < nmemb * size; x++)
-			*ptr++ = 0;
+	memset(ptr, 0, nmemb * size);
 	}
-	return (pointer);
+	return (ptr);
 }
 /**
  * *_memset - fills memory with a constant byte
@@ -38,11 +29,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int x;
+	char *ptr = s;
 
-	for (x = 0; x < n; x++)
+	while (n--)
 	{
-		s[x] = b;
+	*ptr++ = b;
 	}
 	return (s);
 }
