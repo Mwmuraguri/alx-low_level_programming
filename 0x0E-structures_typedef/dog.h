@@ -6,7 +6,7 @@
  *
  * @name: information
  * @age: info
- * owner: info
+ * @owner: info
  *
  * description - long description
  */
