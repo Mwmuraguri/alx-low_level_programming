@@ -1,23 +1,40 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a listint_t list and sets head to NULL
- * @head: pointer to pointer to the first element in the list
+ * delete_nodeint_at_index - deletes the node at a given index of a linked list
+ * @head: pointer to the pointer to the first node of the list
+ * @index: index of the node to be deleted
  *
- * Return: void
+ * Return: 1 on success, -1 on failure
  */
-void free_listint2(listint_t **head)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp = NULL;
+	listint_t *current, *prev;
+	unsigned int i = 0;
 
-	if (head == NULL)
-		return;
+	if (!head || !*head)
+		return (-1);
 
-	while (*head != NULL)
+	current = *head;
+	if (index == 0)
 	{
-
-		temp = *head;
-		*head = (*head)->next;
-		free(temp);
+		*head = current->next;
+		free(current);
+		return (1);
 	}
+
+	while (current && i < index)
+	{
+		prev = current;
+		current = current->next;
+		i++;
+	}
+
+	if (!current)
+		return (-1);
+
+	prev->next = current->next;
+	free(current);
+
+	return (1);
 }
