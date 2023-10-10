@@ -41,7 +41,8 @@ int rec_search(int *array, size_t size, int value)
 }
 
 /**
- * advanced_binary - Searches for a value in a sorted array using advanced binary search.
+ * advanced_binary - Searches for a value in a sorted
+ * array using advanced binary search.
  * @array: Pointer to the first element of the array to search in.
  * @size: Number of elements in the array.
  * @value: The value to search for.
